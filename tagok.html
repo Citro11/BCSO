@@ -8,34 +8,54 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f8f0e3;
+            background-color: #f8f0e3; /* Világos háttérszín */
             color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
         }
 
         h2 {
             text-align: center;
-            color: #8B4513;
+            color: #8B4513; /* Sötétbarna */
             font-size: 2.5em;
             margin-top: 50px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        h3.section-title {
+            color: #8B4513; /* Sötétbarna */
+            text-align: center;
+            font-size: 2em;
+            margin-top: 30px;
+            padding-bottom: 10px;
+            background-color: rgba(139, 69, 19, 0.1); /* Világos háttér */
+            border-radius: 10px; /* Lekerekített sarkok */
         }
 
         .team {
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
-            margin: 50px auto;
+            margin: 30px auto;
             max-width: 1000px;
+            padding: 20px;
         }
 
         .member {
-            background-color: #fff;
+            background-color: #ffffff; /* Fehér háttér */
             width: 30%;
             padding: 20px;
-            margin: 20px 0;
+            margin: 20px 10px; /* Növelt oldal margó */
             border-radius: 15px;
             text-align: center;
-            transition: transform 0.3s ease;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animáció */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .member:hover {
+            transform: translateY(-5px); /* Emelkedés hover állapotban */
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
         }
 
         .member img {
@@ -43,16 +63,18 @@
             height: 150px;
             border-radius: 50%;
             margin-bottom: 15px;
+            border: 3px solid #8B4513; /* Határ a képek körül */
         }
 
-        .member h3 {
+        .member h4 {
             font-size: 1.8em;
             margin-bottom: 10px;
+            color: #8B4513; /* Cím színe */
         }
 
         .member p {
             font-size: 1.2em;
-            color: #666;
+            color: #666; /* Sötétebb szürke */
         }
 
         .back-btn-container {
@@ -63,21 +85,23 @@
         .back-btn {
             padding: 15px 30px;
             font-size: 1.2em;
-            background-color: #8B4513;
+            background-color: #8B4513; /* Sötétbarna */
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, transform 0.3s ease;
             text-decoration: none;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
 
         .back-btn:hover {
-            background-color: #F4A460;
+            background-color: #F4A460; /* Világosabb árnyalat a hover állapotban */
+            transform: scale(1.05);
         }
 
         footer {
-            background-color: #8B4513;
+            background-color: #8B4513; /* Sötétbarna */
             color: white;
             padding: 20px;
             text-align: center;
@@ -93,40 +117,60 @@
 
     <h2>Tagjaink</h2>
 
+    <!-- Vezetők -->
+    <h3 class="section-title">Vezetők</h3>
     <div class="team">
         <div class="member">
-            <img src="sheriff1.jpg" alt="Sheriff John">
-            <h3>John Doe</h3>
+            <img src="leader1.jpg" alt="Leader 1">
+            <h4>John Doe</h4>
             <p>Sheriff, a frakció vezetője</p>
         </div>
         <div class="member">
-            <img src="sheriff2.jpg" alt="Sheriff Jane">
-            <h3>Jane Smith</h3>
-            <p>Deputy Sheriff, a csapat legmegbízhatóbb tagja</p>
+            <img src="leader2.jpg" alt="Leader 2">
+            <h4>Jane Smith</h4>
+            <p>Deputy Sheriff, a frakció vezetőhelyettese</p>
         </div>
+    </div>
+
+    <!-- Alvezetők -->
+    <h3 class="section-title">Alvezetők</h3>
+    <div class="team">
         <div class="member">
-            <img src="sheriff3.jpg" alt="Officer Alex">
-            <h3>Alex Johnson</h3>
+            <img src="subleader.jpg" alt="Subleader">
+            <h4>Alex Johnson</h4>
             <p>Őrjárat tiszt, tapasztalt RP játékos</p>
         </div>
     </div>
 
+    <!-- Tagok -->
+    <h3 class="section-title">Tagok</h3>
+    <div class="team">
+        <div class="member">
+            <img src="member1.jpg" alt="Member 1">
+            <h4>Tag 1</h4>
+            <p>Csapattag</p>
+        </div>
+        <div class="member">
+            <img src="member2.jpg" alt="Member 2">
+            <h4>Tag 2</h4>
+            <p>Csapattag</p>
+        </div>
+        <div class="member">
+            <img src="member3.jpg" alt="Member 3">
+            <h4>Tag 3</h4>
+            <p>Csapattag</p>
+        </div>
+        <!-- Add more members as needed (total of 20) -->
+    </div>
+
     <div class="back-btn-container">
-        <a href="Index.html" class="back-btn">Vissza a főoldalra</a>
+        <a href="Sheriff.html" class="back-btn">Vissza a főoldalra</a>
     </div>
-    <div class="member">
-        <img src="sheriff4.jpg" alt="Őrjárat tiszt Lilla">
-        <h3>Lilla Tóth</h3>
-        <p>Közösségi rendőr, felelős a kommunikációért</p>
-    </div>
-    <div class="member">
-        <img src="sheriff5.jpg" alt="Nyomozó Mihály">
-        <h3>Mihály Horváth</h3>
-        <p>Nyomozó, specializálódott a bűnügyi esetekre</p>
-    </div>
+
     <footer>
         <p>© 2024 RP Sheriff Frakció | Minden jog fenntartva</p>
     </footer>
 
 </body>
 </html>
+
